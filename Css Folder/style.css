@@ -1,0 +1,713 @@
+@font-face {
+    src: url(../Font/Font4.ttf);
+    font-family: font1;
+}
+
+@font-face {
+    src: url(../Font/Clock2.ttf);
+    font-family: clock;
+}
+
+
+body {
+    background-color: rgba(47, 0, 90, 0.596);
+    overflow: hidden;
+}
+
+.body_bg {
+    background-image: url(../Images/Game_bg3.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#Loading_Screen {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#Loader_Box_Container {
+    position: relative;
+    width: fit-content;
+}
+
+#Loader_Container {
+    position: absolute;
+    top: 6px;
+    left: 8px;
+}
+
+#Loader {
+    height: 47px;
+    width: 5px;
+}
+
+#counting {
+    position: absolute;
+    left: 50%;
+    top: 48%;
+    transform: translate(-50%, -50%);
+    color: white;
+}
+
+#Home {
+    display: none;
+    position: relative;
+}
+
+#Start_menu {
+    height: 100vh;
+    margin: 0 auto;
+}
+
+#playBtn {
+    position: absolute;
+    background-color: transparent;
+    border: none;
+    left: 50%;
+    top: 60%;
+    transform: translate(-50%, -50%);
+}
+
+.btnClick {
+    animation-name: click;
+    animation-duration: 0.5s;
+}
+
+@keyframes click {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(0.9);
+    }
+}
+
+#Game_start_Wood{
+    position: relative;
+    display: none;
+}
+
+#Game_start_Stone {                          /*Stone*/
+    position: relative;
+    display: none;
+}
+
+#grid1_bg{
+    height: 100vh;
+}
+
+#grid2_bg {                                 /*Stone*/
+    height: 100vh;
+}
+
+#scoreNpause_Wood {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    width: 600px;
+}
+
+#scoreNpause_Stone {                      /*Stone*/
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    width: 600px;
+}
+
+#Current_score_Wood, #High_score_Wood {
+    width: 80px;
+}
+
+#Current_score_Stone, #High_score_Stone {                        /*Stone*/
+    width: 80px;
+}
+
+#trophy_Wood {
+    width: 55px;
+}
+ 
+#trophy_Stone {                             /*Stone*/
+    width: 55px;
+}
+
+#Pause_btn_container_Wood {
+    position: relative;
+}
+
+#Pause_btn_container_Stone {
+    position: relative;
+}
+
+#Pause_container_Wood {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: transparent;
+    border: none;
+}
+
+#Pause_container_Wood_Press {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: transparent;
+    border: none;
+    display: none;
+}
+
+#Pause_container_Stone {                 /*Stone*/
+    background-color: transparent;
+    border: none;
+}
+
+#Pause_container_Stone_Press {           /*Stone*/
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: transparent;
+    border: none;
+    display: none;
+}
+
+#Pause_Btn_Wood {
+    width: 30px;
+}
+
+#Pause_Btn_Wood_Press {
+    width: 30px;
+}
+
+#Pause_Btn_Stone_Press {                 /*Stone*/
+    width: 30px;
+}
+
+#Pause_Btn_Stone {                        /*Stone*/
+    width: 30px;
+}
+
+#grid1_contain {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -65%);
+    width: 406px;
+}
+
+#grid2_contain {                        /*Stone*/
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -65%);
+    width: 406px;
+}
+
+#grid1 {
+    width: 100%;
+}
+
+#grid2 {                              /*Stone*/
+    width: 100%;
+}
+
+#Pause_Menu_outer_container_Wood {  /*Pause menu Div*/
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -60%);
+    width: 450px;
+    height: 465px;
+    overflow: auto;
+}
+
+
+#Pause_Menu_outer_container_Stone {          /*Stone*/
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -60%);
+    width: 450px;
+    height: 465px;
+    overflow: auto;
+}
+
+#Pause_Menu_outer_container_Wood::-webkit-scrollbar {
+    display: none;
+}
+
+#Pause_Menu_outer_container_Stone::-webkit-scrollbar {    /*Stone*/
+    display: none;
+}
+
+#Pause_Menu_inner_container_Wood {
+    position: relative;
+    width: 365px;
+    height: 333px;
+    display: none;
+}
+
+#Pause_Menu_inner_container_Stone {                       /*Stone*/
+    position: relative;
+    width: 365px;
+    height: 333px;
+    display: none;
+}
+
+.show_Pause_Menu {
+    animation: showPauseMenu 0.8s forwards;
+    display: block;
+    transform: translate(0px, 18px);
+}
+
+@keyframes showPauseMenu {
+    0% {
+        transform: translate(0px, 470px);
+    }
+    80% {
+        transform: translate(0px, 5px);
+    }
+    100% {
+        transform: translate(0px, 18px);
+    }
+}
+
+.hide_Pause_Menu {
+    animation: hidePauseMenu 0.8s forwards;
+    transform: translate(0px, 470px);
+}
+
+@keyframes hidePauseMenu {
+    0% {
+        transform: translate(0px, 18px);
+    }
+    30% {
+        transform: translate(0px, 5px);
+    }
+    100% {
+        transform: translate((0px, 470px));
+    }
+}
+
+#Pause_Menu_Wood {
+    width: 100%;
+}
+
+#Pause_Menu_Stone {                /*Stone*/
+    width: 100%;
+}
+
+.PlayBtn_Pause_menu {
+    transform: translate(0px, 470px);
+}
+
+#Pause_Menu_Play_Btn_Wood {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-47%, -121%);
+    width: 148px;
+    border: none;
+    background-color: transparent;
+}
+
+#Pause_Menu_Play_Btn_Stone {                   /*Stone*/
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-47%, -121%);
+    width: 148px;
+    border: none;
+    background-color: transparent;
+}
+
+#Pause_Menu_Home_Btn_Wood {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-47%, -17%);
+    width: 148px;
+    border: none;
+    background-color: transparent;
+}
+
+#Pause_Menu_Home_Btn_Stone {       /*Stone*/
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-47%, -17%);
+    width: 148px;
+    border: none;
+    background-color: transparent;
+}
+
+#Pause_Menu_Mode1_Btn_Wood {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-47%, 83%);
+    width: 148px;
+    border: none;
+    background-color: transparent;
+}
+
+#Pause_Menu_Mode1_Btn_Stone {      /*Stone*/
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-47%, 83%);
+    width: 148px;
+    border: none;
+    background-color: transparent;
+}
+
+#Pause_Menu_SoundON_Btn_Wood {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-47%, 187%);
+    width: 148px;
+    border: none;
+    background-color: transparent;
+}
+
+#Pause_Menu_SoundON_Btn_Stone {                  /*Stone*/
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-47%, 187%);
+    width: 148px;
+    border: none;
+    background-color: transparent;
+}
+
+#Pause_Menu_SoundOFF_Btn_Wood {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-47%, 187%);
+    width: 148px;
+    border: none;
+    background-color: transparent;
+    display: none;
+}
+
+#Pause_Menu_SoundOFF_Btn_Stone {                        /*Stone*/
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-47%, 187%);
+    width: 148px;
+    border: none;
+    background-color: transparent;
+    display: none;
+}
+
+#Pause_Menu_Play_Wood, #Pause_Menu_Home_Wood, #Pause_Menu_Mode1_Wood, #Pause_Menu_SoundON_Wood, #Pause_Menu_SoundOFF_Wood {
+    width: 100%;
+}
+
+#Pause_Menu_Play_Stone, #Pause_Menu_Home_Stone, #Pause_Menu_Mode1_Stone, #Pause_Menu_SoundON_Stone, #Pause_Menu_SoundOFF_Stone {          /*Stone*/
+    width: 100%;
+}
+
+.Pause_Play_Btn_animation {
+    animation: PlayBtnClicked 0.2s;
+}
+
+@keyframes PlayBtnClicked {
+    0%, 100% {
+        transform: translate(-47%, -121%) scale(1);
+    }
+    50% {
+        transform: translate(-47%, -121%) scale(0.9);
+    }
+}
+
+.Pause_Home_Btn_animation {
+    animation: HomeBtnClicked 0.2s;
+}
+
+@keyframes HomeBtnClicked {
+    0%, 100% {
+        transform: translate(-47%, -17%) scale(1);
+    }
+    50% {
+        transform: translate(-47%, -17%) scale(0.9);
+    }
+}
+
+.Pause_Mode_Btn_animation {
+    animation: ModeBtnClicked 0.2s;
+}
+
+@keyframes ModeBtnClicked {
+    0%, 100% {
+        transform: translate(-47%, 83%) scale(1);
+    }
+    50% {
+        transform: translate(-47%, 83%) scale(0.9);
+    }
+}
+
+#crystal_block_grid {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-49.8%, -64.9%);
+    width: 392px;
+    height: 392px;
+    display: flex;
+    flex-wrap: wrap;
+    border-radius: 4px;
+}
+
+.woodGridImgs {
+    visibility: hidden;
+    /* z-index: 20; */
+    position: relative;
+    transition: width 0.3s;
+}
+
+#wood_block_shapes {
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    top: 85%;
+    left: 50%;
+    width: 355px;
+    transform: translate(-50%, -50%);
+}
+
+#woodBlock1 {
+    position: relative;
+    width: 90px;
+    height: 90px;
+    overflow: visible;
+}
+
+#woodBlock2 {
+    position: relative;
+    width: 90px;
+    height: 90px;
+}
+
+#woodBlock3 {
+    position: relative;
+    width: 90px;
+    height: 90px;
+}
+
+#shape1_container {
+    display: flex;
+    flex-wrap: wrap;
+    width: 90px;
+    cursor: grab;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+#shape2_container {
+    display: flex;
+    flex-wrap: wrap;
+    width: 90px;
+    position: absolute;
+}
+
+#shape3_container {
+    display: flex;
+    flex-wrap: wrap;
+    width: 90px;
+    position: absolute;
+}
+
+.matchBlock {
+    width: 39px;
+}
+
+.showBlocks1 {
+    visibility: hidden;
+}
+
+.showBlocks2 {
+    visibility: hidden;
+}
+
+.showBlocks3 {
+    visibility: hidden;
+}
+
+.LessOpacity {              /*To change the grid image opacity to 0.6*/
+    filter: opacity(0.6);
+}
+
+.MoreOpacity {              /*To change the grid image opacity to 1*/
+    filter: opacity(1);
+}
+
+.BlocksDisplay {            /*To change the blocks display*/
+    display: none;
+}
+
+.AnimationEffect {
+    position: absolute;
+    width: 392px;
+    height: 39.2px;
+    left: 50%;
+    transform: translate(-49.9%, -49.9%);
+    display: flex;
+    /* display: none; */
+}
+
+#brokenCol_Container {
+    position: absolute;
+    top: 42.4%;
+    left: 50.05%;
+    transform: translate(-50%, -50%);
+    width: 392px;
+    height: 392px;
+    display: flex;
+    /* display: none; */
+}
+
+.AnimationEffectCol {
+    width: 39.2px;
+    height: 392px;
+    display: flex;
+    flex-direction: column;
+}
+
+
+#animation_Effects1 {
+    top: 19.5%;
+}
+
+#animation_Effects2 {
+    top: 24.6%;
+}
+
+#animation_Effects3 {
+    top: 29.6%;
+}
+
+#animation_Effects4 {
+    top: 34.7%;
+}
+
+#animation_Effects5 {
+    top: 39.9%;
+}
+
+#animation_Effects6 {
+    top: 44.9%;
+}
+
+#animation_Effects7 {
+    top: 50%;
+}
+
+#animation_Effects8 {
+    top: 55.1%;
+}
+
+#animation_Effects9 {
+    top: 60.2%;
+}
+
+#animation_Effects10 {
+    top: 65.3%;
+}
+
+.BrokenRows {
+    width: 39.2px;
+    position: relative;
+}
+
+.BrokenCols {
+    width: 39.2px;
+    height: 39.2px;
+    position: relative;
+}
+
+.DestroyBlockHidden {
+    visibility: hidden;
+}
+
+.DestroyBlockVisible {
+    visibility: visible;
+}
+
+.BrokenBlock {
+    position: absolute;
+    left: 0;
+}
+
+#AnimateBtn {
+    position: absolute;
+    top: 12%;
+    left: 46.5%;
+    width: 80px;
+}
+
+#CurrentScoreBoard {
+    position: relative;
+}
+
+#LiveScoreDiv {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-63%, -50%);
+    width: 68px;
+}
+
+#LiveScore {
+    color: 	rgb(255, 241, 120);
+    font-family: font1;
+    font-size: 23px;
+}
+
+#HighScoreBoard {
+    position: relative;
+}
+
+#HighScoreDiv {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(39%, -50%);
+    width: 68px;
+}
+
+#HighScore {
+    color: 	rgb(255, 241, 120);
+    font-family: font1;
+    font-size: 23px;
+}
+
+#Timer {
+    position: absolute;
+    background-color: rgb(255, 204, 137);
+    width: 32px;
+    height: 28px;
+    top: 14%;
+    left: 50%;
+    transform: translate(-50%, -45%);
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#CountDown {
+    font-size: 23px;
+    color: rgb(131, 5, 5);
+    font-family: clock;
+}
